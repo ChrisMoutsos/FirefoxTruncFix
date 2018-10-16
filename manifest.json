@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "TruncFix",
+  "version": "1.0",
+
+  "description": "Fixes truncation issue when downloading filenames.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+   },
+
+   "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["truncfix.js"]
+  }
+}

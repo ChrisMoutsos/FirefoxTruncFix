@@ -1,9 +1,7 @@
 function fixHeaders(e) {
     e.responseHeaders.forEach(function(header) {
-        if (header.name.toLowerCase() == "content-disposition") {
-            console.log(header.value);
+        if (header.name.toLowerCase() === "content-disposition") {
             header.value = header.value.replace(/(;\s*filename\s*=\s*)([^\";]+)/, "$1\"$2\"");
-            console.log(header.value);
         }
     });
     return {responseHeaders: e.responseHeaders};
